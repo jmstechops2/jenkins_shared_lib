@@ -11,11 +11,11 @@
       "branch": "main",
       "scriptPath": "Jenkinsfile"
     },
-        {
+      {
       "name": "spring3-mvc-maven-xml-hello-world",
       "branch": "master",
       "scriptPath": "Jenkinsfile"
-    },
+    }
     
   ]
 }
