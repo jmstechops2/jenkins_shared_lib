@@ -12,11 +12,10 @@ pipeline {
         ECRCRED = 'ecr:ap-south-1:aws_credentials'
     }
     stages {
-		stage('GetSCM')
+		stage('GetSCM'){
          steps {
             git credentialsId: 'github_credentials', url: 'https://github.com/jmstechops2/spring3-mvc-maven-xml-hello-world.git'
-
-         }
+		 }
          }
 
        stage('build'){
