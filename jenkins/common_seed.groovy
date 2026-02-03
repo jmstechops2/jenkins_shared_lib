@@ -1,6 +1,6 @@
 import groovy.json.JsonSlurper
 
-def jsonFile = new File("jenkins/input_jobs.json")
+def jsonFile = new File("${WORKSPACE}/jenkins/input_jobs.json")
 def config = new JsonSlurper().parse(jsonFile)
 
 def baseUrl = config.baseUrl
