@@ -1,15 +1,15 @@
 import groovy.json.JsonSlurper
 
-def jsonFile = new File("${WORKSPACE}/jenkins/input_jobs.json")
+def jsonFile = new File("${WORKSPACE}/repos.json")
 def config = new JsonSlurper().parse(jsonFile)
 
 def baseUrl = config.baseUrl
 
 config.repositories.each { repo ->
 
-    def repoName   = repo.name
-    def branchName = repo.branch
-    def scriptPath = repo.scriptPath
+    def repoName        = repo.name
+    def branchName      = repo.branch
+    def jenkinsfilePath = repo.scriptPath  
 
     def gitRepoUrl = "${baseUrl}${repoName}.git"
     def jobName    = repoName
@@ -45,7 +45,7 @@ config.repositories.each { repo ->
                         }
                     }
                 }
-                scriptPath(scriptPath)
+                scriptPath(jenkinsfilePath)   // ✅ now works
             }
         }
     }
