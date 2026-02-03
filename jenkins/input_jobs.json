@@ -1,0 +1,15 @@
+{
+  "baseUrl": "https://github.com/jmstechops2/",
+  "repositories": [
+    {
+      "name": "test-1-madhu",
+      "branch": "master",
+      "scriptPath": "Jenkinsfile"
+    },
+    {
+      "name": "test-2-madhu",
+      "branch": "main",
+      "scriptPath": "Jenkinsfile"
+    }
+  ]
+}
