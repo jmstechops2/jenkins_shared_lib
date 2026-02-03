@@ -18,18 +18,19 @@ pipeline {
                 sh "mvn package"
              }
          }
-         stage('Image Build'){
+          stage('Image Build'){
              steps{
                  script{
-                       docker.build('$IMAGE')
+				 
+                      sh 'docker build -t $IMAGE .'
                  }
+
              }
          }
          stage('Push Image'){
          steps{
              script
                 {
-
                     docker.withRegistry(ECRURL, ECRCRED)
                     {
                         docker.image(IMAGE).push()
@@ -38,15 +39,14 @@ pipeline {
             }
          }
     }
-
     post
     {
         always
         {
             // make sure that the Docker image is removed
+
             sh "docker rmi $IMAGE | true"
         }
     }
-
 }
 }
