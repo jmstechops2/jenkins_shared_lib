@@ -4,7 +4,7 @@
     {
       "name": "test-1-madhu",
       "branch": "master",
-      "scriptPath": "Jenkinsfile"
+      "scriptPath": "MyJenkinsfile"
     },
     {
       "name": "test-2-madhu",
