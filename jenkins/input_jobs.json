@@ -20,7 +20,13 @@
       "name": "spring3-mvc-maven-xml-hello-world-1",
       "branch": "master",
       "scriptPath": "Jenkinsfile"
+    },
+        {
+      "name": "my-new-repo",
+      "branch": "master",
+      "scriptPath": "Jenkinsfile"
     }
+    
     
   ]
 }
